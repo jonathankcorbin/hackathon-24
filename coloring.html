@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Paths by Color</title>
+    <title>Show Paths by Color</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Delete Paths by Color</h1>
-    <div id="svgbox"> </div>
-    <svg id="mySVG3" src="test.svg" width="800" height="600" alt="SVG Image"></svg>
-    <button onclick="deletePathsByColor('rgb(112,141,194)')">Delete #FBAE45 Paths</button>
+    <h1>Show Paths by Color</h1>
+    <svg id="mySVG" width="200" height="200">
+        <path fill="red" d="M10,10 L50,10 L50,50 Z" class="hidden" />
+        <path fill="blue" d="M70,70 L100,70 L100,100 Z" class="hidden" />
+        <path fill="red" d="M120,120 L150,120 L150,150 Z" class="hidden" />
+    </svg>
+    <button onclick="showPathsByColor('red')">1</button>
+    <button onclick="showPathsByColor('blue')">2</button>
 
     <script>
-        function deletePathsByColor(color) {
-            var svg = document.getElementById('mySVG3');
-            var paths = svg.contentDocument;
-            console.log(svg)
-                for (var i = paths.length - 1; i >= 0; i--) {
-                    
-                    if (paths[i].getAttribute('fill') === color) {
-                        paths[i].parentNode.removeChild(paths[i]);
-                    }
+        function showPathsByColor(color) {
+            var paths = document.querySelectorAll('path');
+            paths.forEach(function(path) {
+                if (path.getAttribute('fill') === color) {
+                    path.classList.remove('hidden');
                 }
-            }
+            });
+        }
     </script>
 </body>
 </html>
