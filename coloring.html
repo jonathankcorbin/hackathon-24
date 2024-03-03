@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Paths by Color</title>
+</head>
+<body>
+    <h1>Delete Paths by Color</h1>
+    <div id="svgbox"> </div>
+    <svg id="mySVG3" src="test.svg" width="800" height="600" alt="SVG Image"></svg>
+    <button onclick="deletePathsByColor('rgb(112,141,194)')">Delete #FBAE45 Paths</button>
+
+    <script>
+        function deletePathsByColor(color) {
+            var svg = document.getElementById('mySVG3');
+            var paths = svg.contentDocument;
+            console.log(svg)
+                for (var i = paths.length - 1; i >= 0; i--) {
+                    
+                    if (paths[i].getAttribute('fill') === color) {
+                        paths[i].parentNode.removeChild(paths[i]);
+                    }
+                }
+            }
+    </script>
+</body>
+</html>
