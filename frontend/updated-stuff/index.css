@@ -1,15 +1,25 @@
-h1 {
-    x    display: flex;
+    h1 {
+        display: flex;
         flex-direction: row;
         justify-content: center;
+        text-align: center;
         font-size: 45px;  
         color: black;
-            font-family: "Madimi One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-     }
+        font-family: "Madimi One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    x  
     /* Wanna color the top part of the website but only a part of it colors */
      
+    h2 {
+        color: black;
+        font-family: "Madimi One", sans-serif;
+        font-weight: 320;  
+        font-style: normal;
+        /* This doesn't work, for some reason... */
+    }
+
     
     .centered {
         width: 100%;
@@ -94,14 +104,7 @@ h1 {
     
       /*Feel free to make changes as desired*/
       }
-    
-      h1 {
-        text-align: center;
-      }
-    
-      h2 {
-        text-align: center;
-      }
+
     
       nav {
         background-color: #333;
