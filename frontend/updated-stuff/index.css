@@ -61,6 +61,7 @@
     body {
         background-color: #95F9E3;
         margin: 0px;
+        transition: background-color 0.5s;
     }
     
     #Upload:hover {
@@ -160,6 +161,7 @@
     
     body {
         transition: background-color 0.5s;
+        background-color:  #95F9E3;
     }
     
     .container {
