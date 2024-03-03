@@ -12,13 +12,7 @@
     x  
     /* Wanna color the top part of the website but only a part of it colors */
      
-    h2 {
-        color: black;
-        font-family: "Madimi One", sans-serif;
-        font-weight: 320;  
-        font-style: normal;
-        /* This doesn't work, for some reason... */
-    }
+
 
     
     .centered {
@@ -102,12 +96,13 @@
         height: 150px;
         border-width: 10px;
         border-color: #111;
-    
+        text-align: center;
+        font-family: "Madimi One", sans-serif;
       /*Feel free to make changes as desired*/
       }
 
     
-      nav {
+        nav {
         background-color: #333;
         overflow: hidden;
         font-family: "Madimi One", sans-serif;
@@ -195,6 +190,7 @@
         border-radius: 34px;
     }
     
+
     .slider:before {
         position: absolute;
         content: "";
